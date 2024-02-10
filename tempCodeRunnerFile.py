@@ -1,0 +1,1 @@
+self.movement[1] - self.movement[0] 
