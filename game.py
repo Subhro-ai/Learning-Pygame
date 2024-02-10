@@ -1,6 +1,7 @@
 import sys
 
 import pygame
+from scripts.utils import load_image
 from scripts.enitites import PhysicsEntity 
 
 class Game:
@@ -11,6 +12,9 @@ class Game:
         self.screen = pygame.display.set_mode((640, 480))
 
         self.clock = pygame.time.Clock()
+        self.assets = {
+            'player' : load_image('entities/player.png')
+        }
 
         self.movement = [False, False]
         self.player = PhysicsEntity(self, 'player', (50, 50), (8, 15))
